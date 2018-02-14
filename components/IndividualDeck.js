@@ -9,7 +9,6 @@ class IndividualDeck extends Component {
   })
 
   render() {
-    console.log(this.props.navigation)
   	const { deckTitle, questions, navigation } = this.props
     return (
       <View style={styles.container}>
@@ -28,7 +27,7 @@ class IndividualDeck extends Component {
           <TouchableOpacity style={styles.androidSubmitBtn}
             onPress={() => navigation.navigate(
             'Quiz',
-            {questions}
+            {deckTitle, questions}
           )}>
             <Text style={styles.submitBtnText}> Start Quiz </Text>
           </TouchableOpacity>

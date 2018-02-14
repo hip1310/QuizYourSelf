@@ -37,7 +37,7 @@ class Quiz extends Component {
   }
 
   render() {
-    const { questions } = this.props.navigation.state.params
+    const { deckTitle, questions } = this.props.navigation.state.params
     const { navigation } = this.props
     const { currQue, correctQues, showResult } = this.state
     return (
@@ -50,12 +50,15 @@ class Quiz extends Component {
             <TouchableOpacity style={styles.androidSubmitBtn}
               onPress={() => navigation.navigate(
                 'Quiz',
-                {questions}
+                {deckTitle, questions}
             )}>
               <Text style={styles.submitBtnText}> Restart Quiz </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.androidSubmitBtn}
-              onPress={() => navigation.goBack()}>
+              onPress={() => navigation.navigate(
+                'IndividualDeck',
+                {deck: deckTitle}
+            )}>
               <Text style={styles.submitBtnText}> Back to Deck </Text>
             </TouchableOpacity>
           </View>
