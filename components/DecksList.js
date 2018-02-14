@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { getDecks, removeAllDecks } from '../utils/api'
 import { receiveDecks } from '../actions'
 import { styles } from '../utils/styles'
-import { setLocalNotification } from '../utils/notifications'
 
 class DecksList extends Component {
   componentDidMount () {
@@ -12,13 +11,10 @@ class DecksList extends Component {
 
     getDecks()
       .then((decks) => dispatch(receiveDecks(decks)))
-
-    setLocalNotification()
   }
 
   render() {
   	const { decks, navigation } = this.props
-  	console.log(decks)
 
     return (
         <ScrollView style={{flex: 1}}>

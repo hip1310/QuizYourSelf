@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import { styles } from '../utils/styles'
 import QueAns from './QueAns'
+import {
+  setLocalNotification,
+  clearLocalNotification,
+} from '../utils/notifications'
 
 class Quiz extends Component {
   state = {
@@ -27,6 +31,8 @@ class Quiz extends Component {
         correctQues: correctQues,
         showResult: true,
       })
+
+      clearLocalNotification().then(setLocalNotification())
     }
   }
 
