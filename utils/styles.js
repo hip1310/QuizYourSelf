@@ -52,4 +52,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  headerBtn: {
+    backgroundColor: purple,
+    marginLeft: 15,
+  },
 })

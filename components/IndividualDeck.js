@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
+import { Ionicons } from '@expo/vector-icons'
 import { styles } from '../utils/styles'
 
 class IndividualDeck extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: `${navigation.state.params.deck}`
+    title: `${navigation.state.params.deck}`,
+    headerLeft: (
+      <TouchableOpacity style={styles.headerBtn}
+        onPress={() => navigation.navigate('DecksList')}>
+        <Ionicons name="md-arrow-back" size={32} color="white" />
+      </TouchableOpacity>
+    ),
   })
 
   render() {
