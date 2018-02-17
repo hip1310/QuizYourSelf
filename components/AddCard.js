@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Keyboard
+} from 'react-native'
 import { connect } from 'react-redux'
 import { styles } from '../utils/styles'
 import { addCard } from '../actions'
@@ -12,6 +18,7 @@ class AddCard extends Component {
   }
 
   onAddCard = () => {
+    Keyboard.dismiss()
   	const { question, answer } = this.state
   	const deckTitle = this.props.deckTitle
      

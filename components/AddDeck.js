@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Keyboard
+} from 'react-native'
 import { connect } from 'react-redux'
 import { styles } from '../utils/styles'
 import { addDeck } from '../actions'
@@ -11,8 +17,9 @@ class AddDeck extends Component {
   }
 
   onSubmit = () => {
-  	const deckTitle = this.state.deckTitle
+    Keyboard.dismiss()
 
+    const deckTitle = this.state.deckTitle
   	if (deckTitle) {
   	  this.props.dispatch(addDeck({
         [deckTitle]: {title: deckTitle, questions: []}
