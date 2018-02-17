@@ -56,4 +56,20 @@ export const styles = StyleSheet.create({
     backgroundColor: purple,
     marginLeft: 15,
   },
+  listItem: {
+    marginBottom: 20,
+    marginLeft: 30,
+    marginRight: 30,
+    borderRadius: 15,
+    padding: 10,
+    backgroundColor: purple,
+  },
+  listItemTitle: {
+    color: white,
+    fontSize: 20,
+    paddingTop: 20,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 })
