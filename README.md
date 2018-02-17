@@ -1,3 +1,22 @@
+# QuizYourSelf Project
+
+React-native app for creating and playing quizzes. This App is designed and built for Android platform.
+
+# Installation
+
+Download or clone the repository.
+Then type `npm install` in the root directory.
+This will install all the dependencies needed to run the program.
+
+# To Run the app
+
+type `npm start`
+This will have the app running on localhost:3000
+Install `expo` app on your android phone
+Scan the QR code from console where the app is running
+
+# Create React Native App
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
