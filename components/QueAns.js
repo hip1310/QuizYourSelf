@@ -84,13 +84,13 @@ class QueAns extends Component {
         <View>
           <Animated.View
             style={[ flipStyles.flipCard, frontAnimatedStyle ]}>
-            <Text style={styles.infoText}>
+            <Text style={styles.queAnsText}>
               {question}
             </Text>
           </Animated.View>
           <Animated.View
             style={[ flipStyles.flipCard, flipStyles.flipCardBack, backAnimatedStyle ]}>
-            <Text style={styles.infoText}>
+            <Text style={styles.queAnsText}>
               {answer}
             </Text>
           </Animated.View>
@@ -108,9 +108,13 @@ class QueAns extends Component {
 const flipStyles = StyleSheet.create({
   flipCard: {
     height: 200,
+    width: 300,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: purple,
+    margin: 20,
+    borderRadius: 10,
   },
   flipCardBack: {
     position: "absolute",

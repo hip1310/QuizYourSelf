@@ -4,21 +4,13 @@ import { purple, white } from './colors'
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 5,
     backgroundColor: white,
   },
   row: {
     flexDirection: 'row',
     flex: 1,
     alignItems: 'center',
-  },
-  iosSubmitBtn: {
-    backgroundColor: purple,
-    padding: 10,
-    borderRadius: 7,
-    height: 45,
-    marginLeft: 40,
-    marginRight: 40,
   },
   androidSubmitBtn: {
     backgroundColor: purple,
@@ -52,9 +44,23 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  smallTextCenter: {
+    fontSize: 17,
+    paddingBottom: 10,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   headerBtn: {
     backgroundColor: purple,
     marginLeft: 15,
+  },
+  listContainer: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 10,
+    padding: 10,
+    paddingTop: 20,
   },
   listItem: {
     marginBottom: 20,
@@ -68,6 +74,26 @@ export const styles = StyleSheet.create({
     color: white,
     fontSize: 20,
     paddingTop: 20,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  listItemSubtitle: {
+    color: white,
+    fontSize: 15,
+    paddingTop: 10,
+    paddingBottom: 20,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  queAnsText: {
+    color: white,
+    fontSize: 25,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 15,
+    paddingLeft: 15,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',

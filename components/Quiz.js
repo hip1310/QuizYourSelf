@@ -42,11 +42,15 @@ class Quiz extends Component {
     const { currQue, correctQues, showResult } = this.state
     return (
       <View style={styles.container}>
-        <Text>{currQue+1}/{questions.length}</Text>
+        <Text style={{fontSize: 17, paddingLeft: 5}}>
+          {currQue+1}/{questions.length}
+        </Text>
         <QueAns card={questions[currQue]} />
         {showResult ?
           <View>
-            <Text>Score: {correctQues}</Text>
+            <Text style={styles.smallTextCenter}>
+              Score: {correctQues}
+            </Text>
             <TouchableOpacity style={styles.androidSubmitBtn}
               onPress={() => navigation.navigate(
                 'Quiz',

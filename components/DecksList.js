@@ -20,7 +20,7 @@ class DecksList extends Component {
 
     return (
       <ScrollView style={{flex: 1}}>
-        <List containerStyle={{margin: 10, padding: 10}}>
+        <List containerStyle={styles.listContainer}>
           {Object.keys(decks).map((deck,i) => (
             <ListItem
               containerStyle={styles.listItem}
@@ -28,7 +28,7 @@ class DecksList extends Component {
               title={decks[deck].title}
               titleStyle={styles.listItemTitle}
               subtitle={`${decks[deck].questions.length} cards`}
-              subtitleStyle={styles.infoText}
+              subtitleStyle={styles.listItemSubtitle}
               onPress={() => navigation.navigate(
                 'IndividualDeck',
                 {deck: deck},
